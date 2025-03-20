@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Windows Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="full-screen-dropzone">
+        <div class="dashboard">
+            <button onclick="openFilePicker('text')">Open Text File</button>
+            <button onclick="openFilePicker('image')">Open Image</button>
+            <button onclick="openFilePicker('pdf')">Open PDF</button>
+        </div>
+
+        <div id="windows-container"></div>
+
+        <!-- Hidden file input -->
+        <input type="file" id="file-input" style="display: none;" onchange="handleFileSelection(event)">
+    </div>
+
+    <!-- Taskbar -->
+    <div id="taskbar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
